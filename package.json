@@ -1,0 +1,24 @@
+{
+  "name": "noteswebapp-nodb",
+  "version": "1.0.0",
+  "description": "Mini Project for making short text notes, made using EJS and Vanilla CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devansh-bajpai/notesWebApp-noDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/devansh-bajpai/notesWebApp-noDB/issues"
+  },
+  "homepage": "https://github.com/devansh-bajpai/notesWebApp-noDB#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

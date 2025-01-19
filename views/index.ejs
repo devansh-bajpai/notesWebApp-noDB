@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notes</title>
+    <title>NotesPustak</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="icon" href="/images/logoImage.png">
 
 
     <<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,21 +19,23 @@
 
   </head>
   <body>
+
+
     <div id="headerDiv">
         <img src="/images/logoImage.png" alt="logoImage" id="headerLogoImage" />
         <h5 id="mainHeaderText" class="jersey-15-regular">NotesPustak</h5>
       </div>
   
       <div id="formDiv">
-        <form action="" id="mainForm">
+        <form action="/create" method="post" id="mainForm">
           <input
             type="text"
-            name="fileName"
+            name="title"
             id="fileNameInput"
             placeholder="Title"
           />
           <textarea
-            name="details"
+            name="content"
             id="detailsInput"
             placeholder="Type here..."
           ></textarea>
@@ -43,7 +46,22 @@
       </div>
   
       <div id="cardsDiv">
-          <!-- <div class="card"></div> -->
+         
+        <% if(files.length == 0){ %>
+          <div id="emptyCardsDisplay">
+            No Cards Yet, Create One
+          </div>
+          <%} else {%>
+            <%files.forEach((val) => { %>
+              <div class="card">
+                <h6 class="cardTitle">
+                  <%=val.replace('.txt', '')%>
+                </h6>
+              </div>
+
+            <%})%>
+          <%}%>
+
       </div>
   
       <div id="footerDiv">

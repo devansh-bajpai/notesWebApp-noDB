@@ -1,2 +1,2 @@
 # notesWebApp-noDB
-Mini Project for making short text notes, made using EJS and Vanilla CSS
+Mini project for making short text format notes. Made with Express, EJs and Vanilla CSS.

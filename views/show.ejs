@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=filename.replace('.txt', '')%></title>
+    <link rel="stylesheet" href="/stylesheets/style_show.css">
+
+    <link rel="icon" href="/images/logoImage.png">
+
+    <<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div id="headerDiv">
+        <img src="/images/logoImage.png" alt="logoImage" id="headerLogoImage" />
+        <h5 id="mainHeaderText" class="jersey-15-regular">NotesPustak</h5>
+    </div>
+
+
+      <div id="contentDiv">
+        <form action="/edit/<%=filename%>" method="post" id="editForm">
+            <input type="text" name="renameFile" id="rename" placeholder="<%=filename.replace('.txt', '')%>">
+            <textarea name="alterContent" id="alter"><%=data%></textarea>
+            <input type="submit" value="Save Changes" id="submitButton">
+
+        </form>
+
+      </div>
+      
+
+      
+      <div id="footerDiv">
+        <a href="https://github.com/devansh-bajpai" class="footerLinks">
+          <img src="/images/githubLogo.png" alt="githubLogo" id="githubLogo" />
+          GitHub</a
+        >
+        <a href="https://youtube.com" class="footerLinks">
+          <img src="/images/linkedInLogo.png" alt="linkedinLogo" id="linkedinLogo" />
+          LinkedIn</a
+        >
+      </div>
+  
+  
+</body>
+</html>

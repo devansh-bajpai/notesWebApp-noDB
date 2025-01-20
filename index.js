@@ -66,6 +66,18 @@ app.post('/edit/:filename', (req, res) => {
 
 })
 
+app.get('/delete/:filename', (req, res) => {
+    fs.unlink(`./files_save/${req.params.filename}`, (err) => {
+        if (err) {
+            console.log(err);
+            res.redirect('/');
+        }
+        console.log('file deleted successfully');
+        res.redirect('/');
+    })
+})
+
+
 app.listen(3000, () => {
     console.log("App is Listening on PORT 3000");
 });
